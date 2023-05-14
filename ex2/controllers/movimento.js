@@ -1,7 +1,7 @@
 const Movimento = require('../models/movimento');
 
 module.exports.list = async () => {
-  return await Movimento.find({}, { _id: 0 });
+  return await Movimento.find({}, { _id: 0 }).sort("data");
 }
 
 module.exports.listByTipo = async () => {
@@ -38,4 +38,8 @@ module.exports.listByEntidade = async () => {
     acc[cur.entidade] = cur.valor;
     return acc;
   }, {})
+}
+
+module.exports.add = async (movimento) => {
+  return await Movimento.create(movimento);
 }

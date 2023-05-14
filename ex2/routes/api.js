@@ -13,6 +13,10 @@ router.get('/movimentos', async function(req, res) {
   }
 });
 
+router.post('/movimentos', async function(req, res) {
+  res.send(await movimento.add(req.body));
+});
+
 router.get('/pagamentos', async function(req, res) {
   if (req.query.status) {
     res.send(await pagamento.status(req.query.status));

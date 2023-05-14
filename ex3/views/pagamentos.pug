@@ -1,0 +1,37 @@
+extends layout
+
+block content
+  h1.font-bold.text-2xl.mb-2 Pagamentos
+
+  table.w-full
+    thead
+      tr
+        th.px-4.py-2.border.border-gray-400.bg-gray-100 Fração
+        th.px-4.py-2.border.border-gray-400.bg-gray-100 Jan
+        th.px-4.py-2.border.border-gray-400.bg-gray-100 Fev
+        th.px-4.py-2.border.border-gray-400.bg-gray-100 Mar
+        th.px-4.py-2.border.border-gray-400.bg-gray-100 Abr
+        th.px-4.py-2.border.border-gray-400.bg-gray-100 Mai
+        th.px-4.py-2.border.border-gray-400.bg-gray-100 Jun
+        th.px-4.py-2.border.border-gray-400.bg-gray-100 Jul
+        th.px-4.py-2.border.border-gray-400.bg-gray-100 Ago
+        th.px-4.py-2.border.border-gray-400.bg-gray-100 Set
+        th.px-4.py-2.border.border-gray-400.bg-gray-100 Out
+        th.px-4.py-2.border.border-gray-400.bg-gray-100 Nov
+        th.px-4.py-2.border.border-gray-400.bg-gray-100 Dez
+    tbody
+      each pagamento in pagamentos
+        tr
+          td.px-4.py-2.border.border-gray-400= pagamento.fracao
+          td.px-4.py-2.border.border-gray-400(class=(pagamento.jan ? 'bg-green-200' : 'bg-red-500'))
+          td.px-4.py-2.border.border-gray-400(class=(pagamento.fev ? 'bg-green-200' : 'bg-red-500'))
+          td.px-4.py-2.border.border-gray-400(class=(pagamento.mar ? 'bg-green-200' : 'bg-red-500'))
+          td.px-4.py-2.border.border-gray-400(class=(pagamento.abr ? 'bg-green-200' : 'bg-red-500'))
+          td.px-4.py-2.border.border-gray-400(class=(pagamento.mai ? 'bg-green-200' : 'bg-red-500'))
+          td.px-4.py-2.border.border-gray-400(class=(pagamento.jun ? 'bg-green-200' : 'bg-red-500'))
+          td.px-4.py-2.border.border-gray-400(class=(pagamento.jul ? 'bg-green-200' : 'bg-red-500'))
+          td.px-4.py-2.border.border-gray-400(class=(pagamento.ago ? 'bg-green-200' : 'bg-red-500'))
+          td.px-4.py-2.border.border-gray-400(class=(pagamento.set ? 'bg-green-200' : 'bg-red-500'))
+          td.px-4.py-2.border.border-gray-400(class=(pagamento.out ? 'bg-green-200' : 'bg-red-500'))
+          td.px-4.py-2.border.border-gray-400(class=(pagamento.nov ? 'bg-green-200' : 'bg-red-500'))
+          td.px-4.py-2.border.border-gray-400(class=(pagamento.dez ? 'bg-green-200' : 'bg-red-500'))

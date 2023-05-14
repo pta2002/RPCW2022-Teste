@@ -1,0 +1,17 @@
+doctype html
+html
+  head
+    title= title
+    script(src='https://cdn.tailwindcss.com')
+    script
+      |  tailwind.config = {
+      |    separator: '_'
+      |  }
+  body
+    nav.bg-slate-200.w-full.p-4
+      .container.mx-auto.flex.gap-4
+        a.text-slate-800.font-bold(href='/') Home
+        a.text-slate-800.font-bold(href='/movimentos') Movimentos
+        a.text-slate-800.font-bold(href='/pagamentos') Pagamentos
+    .container.mx-auto.mt-4
+      block content
